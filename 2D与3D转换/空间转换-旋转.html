@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转效果</title>
+    <style>
+      img{
+        width: 250px;
+        transition: all 2s;
+        /* 若没有设置过度时间转与不转都一样 */
+      }
+
+      .box{
+        /* 添加透视效果，否则x旋转会变扁 */
+        perspective: 1000px;
+      }
+      
+      .box img:hover{
+        /*1.z轴旋转： transform: rotate(360deg);与平面旋转一样 */
+        /* transform: rotateZ(360deg); */
+
+        /* 2.x轴旋转 ,左手法则来确定哪个是正方向*/
+
+        /* ps补充rotate3d(x,y,z)为自定义一个不属于xyz三轴之间任意一个轴去旋转，一般不会使用 */
+        transform: rotateX(60deg);
+        
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="../img/concept 0.jpg">
+    </div>
+   
+    
+  </body>
+</html>

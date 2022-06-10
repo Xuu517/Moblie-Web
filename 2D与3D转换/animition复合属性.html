@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 动画复合属性格式 */
+    /* animation 动画名称 动画时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕状态 */
+    /* 先动画时长，后延迟时间 */
+    .box{
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+      /* animation: change 1s linear; */
+      /* 分步动画 */
+      /* animation: change 1s steps(3) 1s infinite alternate  ; */
+      /* 动画完毕时状态 */
+      animation: change 1s forwards;
+      /* backwords是默认值 */
+
+
+
+    }
+
+    @keyframes change {
+      from{
+        width: 200px;
+      }
+
+      to{
+        width: 600px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

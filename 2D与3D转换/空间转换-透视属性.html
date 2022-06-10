@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      perspective: 1000PX;
+      /* 透视效果也是父级添加 */
+    }
+
+    .box{
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: pink;
+      transition: all 0.5s; 
+    }
+
+    .box:hover{
+      /* transform: translate3d(50px,100px,200px); */
+      /* z轴效果看不出来，需要依赖其他属性支撑 */
+      transform: translateZ(200PX);
+      
+      
+    }
+  </style>
+</head>
+<body>
+    <div class="box"></div>
+    <!-- 给他的父级添加透视效果body标签 -->
+</body>
+</html>
